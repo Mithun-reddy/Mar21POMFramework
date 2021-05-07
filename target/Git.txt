@@ -3,5 +3,14 @@ Git --> Version control system
 Git --> local machine
 gitHub--> remote machine(server)
 
+git init
+git status (status)
+git add <filename>
+git commit -m "Message"
+
+
+Github(Central repo)
+git branch -M main
+git push -u origin main
 
 
