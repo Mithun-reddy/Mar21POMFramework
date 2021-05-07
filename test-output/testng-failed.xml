@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [LoginModule]" parallel="classes">
+  <test name="LoginTESTon Chrome(failed)" parallel="classes">
+    <parameter name="BrowserName" value="chrome"/>
+    <classes>
+      <class name="testcases.VerifyAccountsModule">
+        <methods>
+          <include name="CreateView_TC11"/>
+          <include name="CreateAccount_TC10" invocation-numbers="0 1"/>
+          <include name="SelectAccountTab"/>
+        </methods>
+      </class> <!-- testcases.VerifyAccountsModule -->
+      <class name="testcases.VerifyLoginFunctionality">
+        <methods>
+          <include name="setup"/>
+          <include name="CreateReport"/>
+          <include name="CloseReport"/>
+          <include name="VerifyLoginErrorMessage01" invocation-numbers="0"/>
+          <include name="VerifyLoginErrorMessage02" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- testcases.VerifyLoginFunctionality -->
+    </classes>
+  </test> <!-- LoginTESTon Chrome(failed) -->
+</suite> <!-- Failed suite [LoginModule] -->

@@ -1,0 +1,11 @@
+Frameworks:
+1. Key-word driven fw
+2. data - driven fw
+3. pom fw (design pattren) --
+4. hybrid model fw --> pom+data+key
+
+
+Workshop timings:
+
+
+5:15 PM PST

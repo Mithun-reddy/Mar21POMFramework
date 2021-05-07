@@ -1,0 +1,7 @@
+Git --> Version control system
+
+Git --> local machine
+gitHub--> remote machine(server)
+
+
+

@@ -1,0 +1,27 @@
+URl
+Login(click on username, password) --> login
+
+OPerations:
+1. Click
+2. Select values from drop down
+3. Enter text
+4. Radio buttons and checkboxes
+5. Drag and drop
+6. attachments
+7. Scroll down
+8. Tabs , min, max, close
+9. Screenshot
+10.Mouse operations
+11.Mouse hover
+12.Calender selection
+
+
+Keyboard: Copy paste
+
+https://qa-tekarch.firebaseapp.com/
+admin123@gmail.com
+admin123
+
+Salesforce account
+Testcases
+
