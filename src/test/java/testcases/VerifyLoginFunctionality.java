@@ -100,6 +100,7 @@ public class VerifyLoginFunctionality extends BaseTest {
 
 		driver = getDriver(sBrowserName);
 		driver.get(oDataUtils.ReadWebElementProperties("App.URL"));
+		System.out.println("This does nothing");
 
 		sa.assertEquals(driver.getTitle(), "Login | Salesforce");
 
