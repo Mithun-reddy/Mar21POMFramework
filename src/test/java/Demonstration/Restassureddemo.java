@@ -17,11 +17,13 @@ public class Restassureddemo {
 	public static void main(String[] args) throws IOException {
 
 //		RestAssured.baseURI = "https://us-central1-qa01-tekarch-accmanager.cloudfunctions.net/login";
+		
+//		Hamcrest library -> 
 //		
-//		JsonObject userCreds = new JsonObject();
-//		userCreds.addProperty("username", "mithun@ta.com");
-//		userCreds.addProperty("password", "mithun");
-//		Response res = RestAssured.given().contentType("application/json").body(userCreds).post();
+		JsonObject userCreds = new JsonObject();
+		userCreds.addProperty("username", "mithun@ta.com");
+		userCreds.addProperty("password", "mithun");
+		Response res = RestAssured.given().contentType("application/json").when().body(userCreds).post().then().assertThat().statusCode(200).extract().response();
 //		System.out.println(res.jsonPath().getString("token[0]"));
 		
 		

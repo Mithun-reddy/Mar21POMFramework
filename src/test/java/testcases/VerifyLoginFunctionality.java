@@ -30,6 +30,8 @@ import pages.loginpage;
 @Listeners(TestListeners.class)
 public class VerifyLoginFunctionality extends BaseTest {
 
+	public loginpage lp;
+
 	@BeforeMethod
 	public void CreateReport(Method sTestMethod) {
 		test = extent.createTest(sTestMethod.getName());
@@ -40,16 +42,15 @@ public class VerifyLoginFunctionality extends BaseTest {
 		Thread.sleep(1000);
 		driver.close();
 	}
-	
-	
-	
-	/* Method will vwrify login functionaly */
-	
 
-	@Parameters({"BrowserName"})
+	/* Method will vwrify login functionaly */
+
+	@Parameters({ "BrowserName" })
 	@Test()
 	public void VerifyLoginErrorMessage01(String sBrowserName) throws IOException {
+
 		driver = getDriver(sBrowserName);
+		lp = new loginpage(BaseTest.driver);
 		driver.get(oDataUtils.ReadWebElementProperties("App.URL"));
 
 		sa.assertEquals(driver.getTitle(), "Login | Salesforce");
@@ -57,7 +58,6 @@ public class VerifyLoginFunctionality extends BaseTest {
 		test.info("Application is launched");
 
 //		WebElement sUserName = driver.findElement(By.xpath(oDataUtils.ReadWebElementProperties("we.username.xpath")));
-		
 
 		if (oCommonUtilities.waitForElementVisible(lp.Username))
 			lp.Username.sendKeys(oDataUtils.ReadAccountProperties("prodaccount.name"));
@@ -93,8 +93,8 @@ public class VerifyLoginFunctionality extends BaseTest {
 		}
 
 	}
-	
-	@Parameters({"BrowserName"})
+
+	@Parameters({ "BrowserName" })
 	@Test
 	public void VerifyLoginErrorMessage02(Method mName, String sBrowserName) throws IOException {
 
@@ -133,10 +133,10 @@ public class VerifyLoginFunctionality extends BaseTest {
 		sa.assertEquals(driver.getCurrentUrl(), oDataUtils.ReadPageURLproperties("Salesforce.HomePage"));
 		if (driver.getCurrentUrl().equals(oDataUtils.ReadPageURLproperties("Salesforce.HomePage"))) {
 
-			test.pass(mName.getName()+" PASSED");
+			test.pass(mName.getName() + " PASSED");
 		} else {
 			test.addScreenCaptureFromPath(oCommonUtilities.takeScreenshot());
-			test.fail(mName.getName()+"TC02 FAILED");
+			test.fail(mName.getName() + "TC02 FAILED");
 		}
 		sa.assertAll();
 

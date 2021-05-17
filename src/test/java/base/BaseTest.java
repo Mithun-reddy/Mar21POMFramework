@@ -36,7 +36,7 @@ public class BaseTest {
 	
 	public CommonUtilities oCommonUtilities = new CommonUtilities();
 	public DataUtilities oDataUtils = new DataUtilities();
-	public loginpage lp = new loginpage(BaseTest.driver);
+	
 	public SoftAssert sa = new SoftAssert();
 	
 	@BeforeTest

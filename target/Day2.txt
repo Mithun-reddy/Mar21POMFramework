@@ -1,3 +1,0 @@
-Selenium Locators:
-
-1. 
