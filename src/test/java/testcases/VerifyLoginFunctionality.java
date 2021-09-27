@@ -141,7 +141,7 @@ public class VerifyLoginFunctionality extends BaseTest {
 			test.fail(mName.getName() + "TC02 FAILED");
 		}
 		sa.assertAll();
-
+		System.out.println("Testcase passed");
 	}
 
 }
