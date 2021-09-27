@@ -41,6 +41,7 @@ public class VerifyLoginFunctionality extends BaseTest {
 	public void CloseReport() throws InterruptedException {
 		Thread.sleep(1000);
 		driver.close();
+		System.out.println("Driver closed");
 	}
 
 	/* Method will vwrify login functionaly */
